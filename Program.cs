@@ -26,6 +26,7 @@ double totalToppingCost = COST_OF_TOPPING * numberOfToppings;
 double baseCost = totalSandwichCost + totalToppingCost;
 
 double orderCost = tip + baseCost * (1-DISCOUNT_AMOUNT);
+orderCost = Math.Round (orderCost, 2);
 
 System.Console.WriteLine("Your order cost is $" + orderCost);
 
