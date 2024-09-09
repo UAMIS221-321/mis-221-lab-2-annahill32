@@ -1,5 +1,7 @@
 ﻿//variables
 
+using System.ComponentModel.DataAnnotations;
+
 int numberOfSandwiches = 0;
 int numberOfToppings = 0;
 double tip = 0;
@@ -18,3 +20,12 @@ System.Console.WriteLine("How much would you like to tip?");
 tip = double.Parse(Console.ReadLine());
 
 double totalSandwichCost = COST_OF_SANDWICH * numberOfSandwiches;
+
+double totalToppingCost = COST_OF_TOPPING * numberOfToppings;
+
+double baseCost = totalSandwichCost + totalToppingCost;
+
+double orderCost = tip + baseCost * (1-DISCOUNT_AMOUNT);
+
+System.Console.WriteLine("Your order cost is $" + orderCost);
+
